@@ -1,5 +1,6 @@
 import React, { Component , useState} from 'react';
 import ReactDOM from 'react-dom/client';
+import { Link } from 'react-router-dom';
 import './Head.css';
 // import Sidebar from './Sidebar';
 
@@ -27,28 +28,28 @@ const Head = ()=>{
                        <p>developers</p>
                 </div> 
             
-                          <div id='test'></div>
+                          <div className='home-icon'>
+                          <Link to={"/"} className='icon-home'> <i class="fa-solid fa-house fa-xl"></i></Link>
+                          </div>
 
                  <div className='btn'>
-                    <div className='btn-log'>
-                        <button id='btn' type='submit' className='btn-1'><i class="fa-regular fa-user"></i> LOG IN </button>
-                    </div>
-                    <div className='btn-sin'>
-                    <button id='btn' type='submit' className='btn-2'><i class="fa-solid fa-id-card"></i> SIGN UP </button>
-                    </div>
+                    <Link to={"/login"} className='btn-1'>Log IN  <i class="fa-regular fa-user"></i></Link>
+                    <Link to={"/register"} className='btn-2'>Register <i class="fa-solid fa-id-card"></i></Link>
+                </div>
+
+
                     <div className='side-bar-container'>
-                        
-                    <i onClick={displayBar} className="fa-solid fa-bars"></i>
+                           <i onClick={displayBar} className="fa-solid fa-bars"></i>
                    
-                    <div className={style} >
+                           <div className={style} >
                     
-                        <a href='/'>Home</a>
-                        <a href='/'>Contacts</a>
-                        <a href='/'>Services</a>
-                        <a href='/'>About us</a>
+                            <a href='/'>Home</a>
+                             <a href='/'>Contacts</a>
+                             <a href='/'>Services</a>
+                             <a href='/'>About us</a>
+                          </div>
                     </div>
-                    </div>
-                 </div>
+                 
 
             </div>
         );

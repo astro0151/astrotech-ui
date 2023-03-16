@@ -2,7 +2,7 @@ import React from "react";
 import './Register.css'
 function Register(){
     return (<div className="reg-container">
-        <form>
+        <form className="form-container">
 
         
         <h3 className="heading">Register your lab</h3>

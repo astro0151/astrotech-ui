@@ -5,13 +5,23 @@
     
 }
 #root {
-    background-image: linear-gradient(to right bottom, #302528, #291e1d, #201914, #16130a, #070b00);
+    /* background-image: linear-gradient(to right bottom, #302528, #291e1d, #201914, #16130a, #070b00); */
    
 }
 .head-nav{
-    margin-left: 70px;
+    /* margin-left: 70px; */
     display: flex;
-    
+    background-image: linear-gradient(to right bottom, #302528, #291e1d, #201914, #16130a, #070b00);
+
+}
+.home-icon{
+    position: relative;
+    top: 30px;
+    /* margin-top: 30px; */
+   
+}
+.icon-home{
+    color: #f0f0f0;
 }
 .txt{
     display: flex;
@@ -61,6 +71,7 @@ text-transform: lowercase;
 }
 .texted-logo{
 padding: 10px;
+margin-left: 100px;
 }
 .logo-icon{
     /* background-color: wheat; */
@@ -96,29 +107,41 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 25px;
 }
 .btn-1{
-    color: white;
+    color: black;
     width: 86px;
     height: 35px;
-    background: #5a4848;
+    background: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     border: none;
     border-radius: 7px 0px 7px 0px;
-    /* padding-left: 20px; */
+    padding-left: 10px;
+    padding-top: 5px;
+    text-decoration: none;
 }
 .btn-2{
-    margin-left: 5px;
-    color: white;
-    width: 86px;
+    color: black;
+    width: 96px;
     height: 35px;
-    background: #5a4848;
+    background: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     border: none;
     border-radius: 7px 0px 7px 0px;
-    /* padding-left: 20px; */
+    padding-left: 10px;
+    padding-top: 5px;
+    text-decoration: none;
+    margin-left: 10px;
 }
-
+.btn-1:hover,.btn-2:hover{
+    color: white;
+    background-color: green;
+}
 .side-bar{
    
     /* display: grid; */
     display: none;
+    /* margin: 20px 60px 0px 10px; */
     
 }
 .side-bar2>a{
@@ -142,8 +165,10 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .fa-bars{
     color:white;
-    margin: 5px ;
+    position: relative;
     font-size: 27px;
+    top: 30px;
+    right: 60px;
 
     
 }
