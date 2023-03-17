@@ -13,7 +13,8 @@ const Home=()=>{
                             <img src="./images/ad-img.png" />   
                       </li>
                      <li>
-                        <button className='book-order-click-btn'>b o o k &bull; h e r e</button>
+                        {/* <button className='book-order-click-btn'>b o o k &bull; h e r e</button> */}
+                        <a className='booking-url ' href="http://localhost:8081">b o o k h e r e</a>
                      </li>
                       
                    
@@ -28,11 +29,14 @@ const Home=()=>{
                         <br />
                         <marquee  >Dear visitors ! chat bot is currently under development, it will be enabled soon....</marquee>
                       
-                        <marquee className="marq1" behavior="alternate" direction="right" scrollamount="5">the AstroTech developrs</marquee>
+                        <marquee className="marq1" behavior="alternate" direction="right" scrollamount="5"> A s t r o ! T e c h</marquee>  
+                        <marquee className="marq2" behavior="alternate" direction="left" scrollamount="5"> D e v e l o p e r s</marquee>
+                    
                     </div>
                     <div className="chat-btn">
                         <button id="chat-start-btn">Start chat</button>
                     </div>
+                    
                 </div>
             </div>
             {/* user chat ends here */}

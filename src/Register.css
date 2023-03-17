@@ -13,7 +13,9 @@ color: #f0f0f0;
     display: grid;
     /* align-items: center; */
     justify-content: center;
-    height: 550px;
+    height: 750px;
+    overflow: hidden;
+    overflow-y: scroll;
     
     
     /* margin-bottom: 80px; */

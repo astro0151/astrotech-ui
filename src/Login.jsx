@@ -22,12 +22,18 @@ let handleChange=(e)=>{
 
 let validate =(values)=>{
     let errors = { };
-    let regex = /^[^\s@] + @[^\s@] + \.[^\s@]{2,3}$/i;
+    // let regex = /^[^\s@] + @[^\s@] + \.[^\s@]{2,3}$/i;
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     if(!values.email){
         errors.email="user email is required..."
+    }else if(!regex.test(values.email)){
+        errors.email="email is not valid"
     }
     if(!values.password){
         errors.password="user password is required..."
+    }else if(values.password.length<8){
+           errors.password="password lenght should be 8 chars or more"
     }
     return errors;
 }
@@ -56,7 +62,7 @@ let handleSubmit =(e)=>{
                         <h3 className='email'>Enter user I D :&gt;</h3>
                         <p className='emailerr'> {formErr.email} </p>
                         <div className='required-msg'></div>
-                        <input id='email' className="emailid" type={"email"} name="email"  onChange={handleChange} value={formValues.email} placeholder=" Email ID"/>
+                        <input id='email' className="emailid" type={"text"} name="email"  onChange={handleChange} value={formValues.email} placeholder=" Email ID"/>
                         </div>
                         <div className='password'>
                            
@@ -70,10 +76,10 @@ let handleSubmit =(e)=>{
                            <p className='box-privecy'>accept! privecy & policy :&gt; </p>
                         </div>
                         
-                        {/* <button  to={"/adminlogin"}  id='btn-btn'> &lt;   L O G I N &gt;</button>  */}
-                       <Link id='btn-btn'>&lt; L O G I N &gt;</Link>
+                        <button    id='btn-btn'> &lt;   L O G I N &gt;</button> 
+                       {/* <Link id='btn-btn'>&lt; L O G I N &gt;</Link> */}
                         <p className='register-link'>Register lab here&gt;</p> <a className='reg-link' href=''>click here</a>
-                        <div className='link-icon'></div>
+                        <div className='link-icon'></div> 
                     </form>
                 </div>
         </div>

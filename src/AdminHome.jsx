@@ -9,7 +9,7 @@ const AdminHome=()=>{
                CustomerService.getAllCustomers().then((response)=>{
                         setCustomers(response.data)
                         console.log(response.data);
-               }).catch(err=>{
+               }).catch(err=>{ 
                 console.log(err);
                })
     },[])
@@ -27,11 +27,11 @@ const AdminHome=()=>{
                            <thead className="table-head">
                             <th>Order Id</th>
                             <th>Name</th>
-                            <th>address</th>
+                            <th>Test name</th>
                             <th>dob</th>
                             <th>gender</th>
                             <th>Contact No</th>
-                            
+                            <th>address</th>
                            </thead>
                            <tbody>
                             {
@@ -40,10 +40,11 @@ const AdminHome=()=>{
                                     <tr key={customer.id}>
                                             <td>{customer.order_id}</td>
                                             <td>{customer.name}</td>
-                                            <td>{customer.address} </td>
+                                            <td>{customer.testName}</td>
                                             <td>{customer.dob} </td>
                                             <td>{customer.gender}</td>
                                             <td>{customer.mo_number}</td>
+                                            <td>{customer.address} </td>
                                     </tr>
                                 )
                             }

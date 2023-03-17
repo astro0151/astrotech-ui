@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <div>
       <Head />
-      <AdminHome />
+    
       <Routes>
            <Route path='/register' element={<Register/>} />
            <Route path='/login' element={<Login/>} />
@@ -30,6 +30,7 @@ function App() {
            {/* <Route path='/contact' element={<Contact/>} /> */}
       </Routes>
       </div>
+      <AdminHome />
       <Footer />
       
     </div>
