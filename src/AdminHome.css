@@ -45,4 +45,11 @@ border-radius: 3px;
     /* margin: 10px 0px 10px 100px; */
     /* margin-right: 100px; */
     /* margin-left: 100px; */
+    overflow: hidden;
+    overflow-y: scroll;
 }
+/* .table{
+    background-color: red;
+    overflow: hidden;
+   
+} */
